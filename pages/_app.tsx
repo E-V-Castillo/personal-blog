@@ -1,6 +1,13 @@
-import 'palceholder/styles/globals.css'
+import 'root/styles/globals.css'
+import Layout from 'root/components/Layout'
+
 import type { AppProps } from 'next/app'
 
+
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+        <Component {...pageProps} />
+    </Layout>
+  )
 }

@@ -16,9 +16,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "palceholder/*": ["./*"]
+      "root/*": ["./*"],
+      "public/*": ["public/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./components/*.tsx"],
   "exclude": ["node_modules"]
 }
