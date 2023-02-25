@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export default function Header(){
     return(
@@ -18,12 +18,12 @@ export default function Header(){
                             About
                         </a>
                     </li>
-                    <li className="px-4 py-2 list-none rounded-md bg-cyan-800">
+                    <li className="list-none ">
                         <a href="#">
                             Login
                         </a>
                     </li>
-                    <li className="px-4 py-2 list-none rounded-md bg-cyan-800">
+                    <li className="list-none ">
                         <a href="#">
                             Signup
                         </a>
