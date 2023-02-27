@@ -1,9 +1,21 @@
 import Image from "next/image"
+import { client } from "root/lib/client"
+import Posts from "root/components/Posts"
 
-export default function Home() {
+export const getServerSideProps = async() => {
+    const query =`*[_type == "post"]`
+    const posts = await client.fetch(query)
+    return {
+        props: {posts}
+    }
+}
+
+
+export default function Home({posts}:any) {
+    
   return (
     <>
-        <div className="h-screen bg-gray-900">
+        <div className="h-screen bg-gray-900 ">
             <div className="flex flex-col items-center pt-10 pb-10 bg-white">
                 <div className="flex items-start"> 
                     <h1 className="text-3xl font-bold">
@@ -55,39 +67,7 @@ export default function Home() {
                         </button>
                 </div>
             </div>
-            <div className="px-8 bg-gray-900">
-                <div className="flex gap-8">
-                    <h1 className="pt-20 pb-20 text-4xl font-bold text-gray-200 ">
-                        My Personal Blogs
-                    </h1>
-                    <button className="text-2xl font-bold text-gray-200 ">
-                        Filter
-                    </button>
-                </div>
-                <div className="">
-                    <div className="w-full h-full shadow-lg">
-                        <div className="relative w-full h-80">
-                            <Image className="object-cover rounded-bl-none rounded-br-none rounded-t-md" src={"https://images.unsplash.com/photo-1677022719836-2b0cb3d18bc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"} alt="blog" fill/>
-                        </div>
-                        <div className="flex flex-col items-start px-4 pt-4 pb-16 text-black bg-teal-500">
-                            <h1 className="text-3xl font-bold">
-                                Why I love Apple products (jk)
-                            </h1>
-                            <p className="mt-6 text-lg">
-                                This is my extremely detailed description about this specific article
-                            </p>
-                            <div className="flex justify-end gap-6 mt-12 ml-auto">
-                                <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded-md">
-                                    Read More
-                                </button>
-                                <button className="px-4 py-2 bg-white border border-black rounded-md">
-                                    Heart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Posts posts={posts}/>
         </div>
     </>
   )
