@@ -12,63 +12,74 @@ export const getServerSideProps = async() => {
 
 
 export default function Home({posts}:any) {
-    
-  return (
-    <>
-        <div className="h-screen bg-gray-900 ">
-            <div className="flex flex-col items-center pt-10 pb-10 bg-white">
-                <div className="flex items-start"> 
-                    <h1 className="text-3xl font-bold">
-                        Hello, I&#39;m Emmanuel
-                    </h1>
-                    <div className="relative w-[50px] h-[50px]">
-                        <Image className="object-cover" src={"/cup.png"} fill alt="cup"/>
+
+    return (
+        <>
+            <div className="h-screen bg-gray-900 ">
+
+                {/* Start of the mini introduction */}
+
+                <div className="flex flex-col items-center gap-4 px-4 pt-8 pb-12 bg-white">
+                    <div className="relative flex"> 
+                        <h1 className="text-2xl font-bold">
+                            Hello, I&#39;m Emmanuel
+                        </h1>
+                        <div className="absolute -right-12 w-[50px] h-[50px]">
+                            <Image className="object-cover" src={"/cup.png"} fill alt="cup"/>
+                        </div>
+                    </div>
+                    <p className="w-full sm:max-w-[600px]">
+                        I&#39;m a full-stack developer with a passion for serving up top of the line designs and systems for people.
+                    </p>
+                    <div className="flex flex-col items-center space-y-2 cursor-pointer ">
+                        <button>
+                            Long Version
+                        </button>
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M10.5 1.72083C5.813 1.72083 2 5.53383 2 10.2208C2 14.9078 5.813 18.7208 10.5 18.7208C15.187 18.7208 19 14.9078 19 10.2208C19 5.53383 15.187 1.72083 10.5 1.72083ZM10.5 20.2208C4.986 20.2208 0.5 15.7348 0.5 10.2208C0.5 4.70683 4.986 0.220825 10.5 0.220825C16.014 0.220825 20.5 4.70683 20.5 10.2208C20.5 15.7348 16.014 20.2208 10.5 20.2208Z" fill="black"/>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M10.5 13.0147C10.301 13.0147 10.109 12.9357 9.96899 12.7937L6.49799 9.3077C6.20499 9.0137 6.20699 8.5387 6.49999 8.2467C6.79399 7.9547 7.26899 7.9547 7.56099 8.2487L10.5 11.2027L13.44 8.2487C13.732 7.9547 14.207 7.9547 14.501 8.2467C14.794 8.5387 14.795 9.0137 14.503 9.3077L11.031 12.7937C10.891 12.9357 10.699 13.0147 10.5 13.0147Z" fill="black"/>
+                        </svg>
                     </div>
                 </div>
-                <p className="inline w-96">
-                    I&#39;m a fullstack developer who loves to build systems and designs for people
-                </p>
-                <ul className="flex gap-20 mt-10 text-gray-800">
-                    <li>
-                        UX/UI
-                    </li>
-                    <li>
-                        NEXTJS
-                    </li>
-                    <li>
-                        API
-                    </li>
-                </ul>
-            </div>
-
-            <div className="px-8 pt-10 bg-teal-500">
-                <h1 className="text-4xl font-bold">
-                    Popular Blogs
-                </h1>
-                <div className="flex flex-col items-center justify-center gap-5 pt-10 pb-10">
-                        <div className="relative w-full"> 
-                            <div className="relative w-full h-72">
-                                <Image className="object-cover" src={"https://images.unsplash.com/photo-1676763133944-1738fb369107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"} alt="blog photo" fill />
-                            </div>  
-                            <div className="absolute px-5 py-2 text-white -rotate-45 bg-pink-400 -top-2 -left-6">
-                                New!
+                {/* This is the Featured Posts Section*/}
+                <div className="px-4 pt-8 pb-16 bg-gray-900 ">
+                    <div className="flex flex-col gap-6 text-white">
+                        <h1 id="blogs" className="text-2xl font-bold">
+                            Featured Blogs
+                        </h1>
+                        {/* individual post */}
+                        <div className="flex flex-col gap-8 md:grid-cols-2 md:grid">
+                            <div className="flex flex-col gap-2 grow">
+                                <div className="relative w-full h-60">
+                                    <Image className="object-cover rounded-md" src={"https://images.unsplash.com/photo-1676763133944-1738fb369107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"} alt="blog photo" fill />
+                                </div>
+                                <div className="flex flex-col gap-4">
+                                    <h1 className="text-2xl font-bold">
+                                        Learn NextJS
+                                    </h1>
+                                    <p className="text-base">
+                                        React has dominated the world of technology for the past two decades. I would like to discuss why it has done so and what certain things have happened in the...
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-2 grow">
+                                <div className="relative w-full h-60">
+                                    <Image className="object-cover rounded-md" src={"https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"} alt="blog photo" fill />
+                                </div>
+                                <div className="flex flex-col gap-4">
+                                    <h1 className="text-2xl font-bold">
+                                        I want to visit Tokyo so baaad
+                                    </h1>
+                                    <p className="text-base">
+                                        Join me on a virtual journey as I share my burning desire to explore the Land of the Rising Sun.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <h1 className="text-4xl font-bold">
-                                Learn NextJS
-                            </h1>
-                            <p className="text-center">
-                                Totally legit, not gonna want to commit suicide after trying it out
-                            </p>
-                        </div>
-                        <button className="px-4 py-2 font-bold bg-yellow-200 rounded-md">
-                            Read More
-                        </button>
+                    </div>
                 </div>
+                <Posts posts={posts}/>
             </div>
-            <Posts posts={posts}/>
-        </div>
-    </>
-  )
+        </>
+    )
 }

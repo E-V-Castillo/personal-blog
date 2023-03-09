@@ -42,7 +42,10 @@ export default defineType({
     defineField({
       name: 'publishedAt',
       title: 'Published at',
-      type: 'datetime',
+      type: 'date',
+      options: {
+        dateFormat: 'MMMM D, YYYY',
+      },
     }),
     defineField({
       name: 'body',
