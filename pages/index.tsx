@@ -21,7 +21,7 @@ export default function Home({posts}:any) {
 
                 <div className="flex flex-col items-center gap-4 px-4 pt-8 pb-12 bg-white">
                     <div className="relative flex"> 
-                        <h1 className="text-2xl font-bold">
+                        <h1 className="text-2xl font-bold font-montserrat">
                             Hello, I&#39;m Emmanuel
                         </h1>
                         <div className="absolute -right-12 w-[50px] h-[50px]">
