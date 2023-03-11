@@ -21,7 +21,7 @@ export default function Home({posts}:any) {
 
                 <div className="flex flex-col items-center gap-4 px-4 pt-8 pb-12 bg-white">
                     <div className="relative flex"> 
-                        <h1 className="text-2xl font-bold font-montserrat">
+                        <h1 className="text-2xl font-bold font-poppins">
                             Hello, I&#39;m Emmanuel
                         </h1>
                         <div className="absolute -right-12 w-[50px] h-[50px]">
@@ -44,7 +44,7 @@ export default function Home({posts}:any) {
                 {/* This is the Featured Posts Section*/}
                 <div className="px-4 pt-8 pb-16 bg-gray-900 ">
                     <div className="flex flex-col gap-6 text-white">
-                        <h1 id="blogs" className="text-2xl font-bold">
+                        <h1 id="blogs" className="text-2xl font-bold font-poppins">
                             Featured Blogs
                         </h1>
                         {/* individual post */}
@@ -54,7 +54,7 @@ export default function Home({posts}:any) {
                                     <Image className="object-cover rounded-md" src={"https://images.unsplash.com/photo-1676763133944-1738fb369107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"} alt="blog photo" fill />
                                 </div>
                                 <div className="flex flex-col gap-4">
-                                    <h1 className="text-2xl font-bold">
+                                    <h1 className="text-2xl font-bold font-poppins">
                                         Learn NextJS
                                     </h1>
                                     <p className="text-base">
@@ -67,7 +67,7 @@ export default function Home({posts}:any) {
                                     <Image className="object-cover rounded-md" src={"https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"} alt="blog photo" fill />
                                 </div>
                                 <div className="flex flex-col gap-4">
-                                    <h1 className="text-2xl font-bold">
+                                    <h1 className="text-2xl font-bold font-poppins">
                                         I want to visit Tokyo so baaad
                                     </h1>
                                     <p className="text-base">

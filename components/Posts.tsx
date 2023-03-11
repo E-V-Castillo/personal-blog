@@ -16,11 +16,11 @@ export default function Posts({posts}:any) {
                                 <div  className="relative w-full h-60">
                                     <Image className="object-cover rounded-bl-none rounded-br-none rounded-t-md" src={urlFor(post.mainImage).url()} alt="blog" fill/>
                                 </div>                            
-                                <h1 className="text-2xl font-bold text-white">
+                                <h1 className="text-2xl font-bold text-white font-poppins">
                                     {post.title}
                                 </h1>
                             </Link>
-                                <div className="flex items-center gap-4 py-4">
+                                <div className="flex items-center gap-4 py-4 font-poppins">
                                     <Link className="px-3 py-2 font-bold bg-yellow-400 rounded-lg grow-0 " href={"#something"}>CSS</Link>
                                     <Link className="px-3 py-2 font-bold bg-yellow-400 rounded-lg grow-0 " href={"#react"}>React</Link>
                                 </div>

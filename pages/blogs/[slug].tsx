@@ -54,29 +54,40 @@ export const getStaticProps = async({params: { slug }} : {params:{slug:any}}) =>
 
 export default function Blogs({post}:any) {
     console.log(post)
+    const shortenedTitle = post.title.split(' ').slice(0, 6).join(' ')
     return (
-        <div className='flex flex-col items-center bg-slate-100'>
-            <div className='px-4 '>
-                <div className='flex flex-col gap-4 pt-4'>
-                    <div className='flex max-w-6xl gap-1'>
-                        <Link className='font-bold hover:underline' href={"#"}>Home</Link>
-                        <p>/</p>
-                        <Link className='font-bold hover:underline' href={"#"}>Blogs</Link>
-                        <p>/</p>
-                        <Link className='font-bold hover:underline' href={"#"}>{post.title}</Link>
-                    </div>
-                    <div className='flex flex-col gap-2'>
-                        <time className='font-bold'>Published: {post.publishedAt}</time>
-                        <div className='relative w-full h-[600px]'>
-                            <Image alt="banner" src={urlFor(post.mainImage).url()} fill/>
-                        </div>
-                        <div className='max-w-6xl text-4xl font-bold'>
-                            {post.title}
+        <div>
+            <div className='flex flex-col'>
+                <div className='flex flex-col items-center bg-slate-100'>
+                    <div className='flex flex-col items-start w-full max-w-6xl gap-4 px-4 py-4 font-poppins'>
+                        <div className='flex flex-col gap-4'>
+                            <div className='flex gap-1'>
+                                <Link className=' hover:underline' href={"#"}>Home</Link>
+                                <p>/</p>
+                                <Link className=' hover:underline' href={"#"}>Blogs</Link>
+                                <p>/</p>
+                                <Link className=' hover:underline' href={"#"} title={`${post.title}`}>
+                                    {shortenedTitle}
+                                </Link>
+                            </div>
+                            <div className='max-w-2xl text-3xl font-bold leading-snug md:text-5xl'>
+                                {post.title}
+                            </div>
+                            <time className=''>
+                                Published: {post.publishedAt}
+                            </time>
                         </div>
                     </div>
                 </div>
-                <div className='max-w-6xl'>
-                    <BlogBody body={post.body}/>
+                <div className='flex flex-col items-center text-white bg-gray-900'>
+                    <div className='flex flex-col items-start w-full max-w-6xl px-4 py-8'>
+                        <div className='relative w-full h-[400px] my-4'>
+                            <Image className='object-cover rounded-md' alt="banner" src={urlFor(post.mainImage).url()} fill/>
+                        </div>
+                        <div className='max-w-3xl'>
+                            <BlogBody body={post.body}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

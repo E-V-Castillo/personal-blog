@@ -7,8 +7,8 @@ const components={
     types: {
         image: ({value}:any) => {
             return (
-                <div className="relative w-full h-[720px]">
-                    <Image className="object-contain" alt="image" src={urlFor(value).url()} fill />
+                <div className="relative w-full my-4 h-96">
+                    <Image className="object-cover rounded-md" alt="image" src={urlFor(value).url()} fill/>
                 </div>
             )
         },
@@ -22,16 +22,16 @@ const components={
     },
     block: {
         h1: ({children}:any) => {
-            return <h1 className="py-4 text-2xl font-bold ">{children}</h1>
+            return <h1 className="my-4 text-3xl font-bold font-poppins">{children}</h1>
         },
         h2: ({children}:any) => {
-            return <h2 className="text-xl font-bold">{children}</h2>
+            return <h2 className="my-4 text-xl font-bold font-poppins">{children}</h2>
         },
         h3: ({children}:any) => {
-            return <h3 className="text-lg font-bold">{children}</h3>
+            return <h3 className="my-4 text-lg font-bold font-poppins">{children}</h3>
         },
         h4: ({children}:any) => {
-            return <h4 className="text-base font-bold">{children}</h4>
+            return <h4 className="my-4 text-base font-bold font-poppins">{children}</h4>
         }
     }
     

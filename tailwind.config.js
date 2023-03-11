@@ -1,3 +1,5 @@
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,9 +9,13 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontSize: {
+                "3xl" : "2rem",
+            },
             fontFamily: {
-                sans: [`var(--font-montserrat)`],
-                serif: [`var(--font-poppins)`],
+                montserrat: ["Montserrat"],
+                poppins: ["Poppins"]
+                
             }
         },
     },
