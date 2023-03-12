@@ -11,16 +11,16 @@ export default function Header(){
                 <nav>
                     <ul className="hidden gap-4 md:text-base md:flex">
                         <li>
-                            <Link href={"#blogs"}>Blogs</Link>
+                            <Link className="font-poppins" href={"#blogs"}>Blogs</Link>
                         </li>
                         <li>
-                            <a href="">About</a>
+                            <a className="font-poppins" href="">About</a>
                         </li>
                         <li>
-                            <a href="">Profile</a>
+                            <a className="font-poppins" href="">Profile</a>
                         </li>
                         <li>
-                            <a href="">Something</a>
+                            <a className="font-poppins" href="">Something</a>
                         </li>
                     </ul>
                     <button className="md:hidden">

@@ -15,10 +15,7 @@ export default function Home({posts}:any) {
 
     return (
         <>
-            <div className="h-screen bg-gray-900 ">
-
-                {/* Start of the mini introduction */}
-
+            <div className="h-full bg-gray-900 ">
                 <div className="flex flex-col items-center gap-4 px-4 pt-8 pb-12 bg-white">
                     <div className="relative flex"> 
                         <h1 className="text-2xl font-bold font-poppins">

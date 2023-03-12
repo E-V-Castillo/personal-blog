@@ -58,7 +58,7 @@ export default function Blogs({post}:any) {
     return (
         <div>
             <div className='flex flex-col'>
-                <div className='flex flex-col items-center bg-slate-100'>
+                <div className='flex flex-col items-center bg-slate-400'>
                     <div className='flex flex-col items-start w-full max-w-6xl gap-4 px-4 py-4 font-poppins'>
                         <div className='flex flex-col gap-4'>
                             <div className='flex gap-1'>
@@ -70,7 +70,7 @@ export default function Blogs({post}:any) {
                                     {shortenedTitle}
                                 </Link>
                             </div>
-                            <div className='max-w-2xl text-3xl font-bold leading-snug md:text-5xl'>
+                            <div className='max-w-5xl text-3xl font-bold leading-snug md:text-5xl md:leading-normal'>
                                 {post.title}
                             </div>
                             <time className=''>
