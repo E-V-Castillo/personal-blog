@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export default function Header(){
     return(
-        <header className="flex items-center justify-center w-full p-4 text-white bg-gray-900 h-28">
+        <header className="flex items-center justify-center w-full h-20 p-4 text-white bg-gray-900">
             <div className="flex items-center justify-between w-full md:max-w-6xl">
-                <Link href={"/"} className="relative w-20 h-20">
+                <Link href={"/"} className="relative w-20 h-16">
                     <Image src={"/bunny.svg"} fill  alt="logo"/>
                 </Link>
                 <nav>

@@ -81,8 +81,8 @@ export default function Blogs({post}:any) {
                 </div>
                 <div className='flex flex-col items-center text-white bg-gray-900'>
                     <div className='flex flex-col items-start w-full max-w-6xl px-4 py-8'>
-                        <div className='relative w-full h-[400px] my-4'>
-                            <Image className='object-cover rounded-md' alt="banner" src={urlFor(post.mainImage).url()} fill/>
+                        <div className='relative w-full h-[400px]'>
+                            <Image className='object-cover rounded-md' alt="banner" src={urlFor(post.mainImage).url()}fill/>
                         </div>
                         <div className='max-w-2xl'>
                             <BlogBody body={post.body}/>
