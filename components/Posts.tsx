@@ -4,19 +4,16 @@ import Link from "next/link"
 
 export default function Posts({posts}:any) {
   return (
-    <div>
-        <div className="flex flex-col gap-6 px-4 bg-gray-900">
-            <h1 className="text-2xl font-bold text-white ">
-                Recent Blogs
-            </h1>                             
+    <div className="flex flex-col items-center">
+        <div className="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-flow-col sm:grid-cols-2 lg:grid-cols-3">                                       
             {posts?.map((post:any)=>{
                 return (                    
-                    <div key={post._id}>
+                    <div key={post._id} className="w-full">
                         <Link className="flex flex-col gap-4"  href={`/blogs/${post.slug.current}`}>
                             <div  className="relative w-full h-60">
-                                <Image className="object-cover rounded-bl-none rounded-br-none rounded-t-md" src={urlFor(post.mainImage).url()} alt="blog" fill/>
+                                <Image className="object-cover rounded-md" src={urlFor(post.mainImage).url()} alt="blog" fill/>
                             </div>                            
-                            <h1 className="text-3xl font-bold text-white font-poppins">
+                            <h1 className="text-2xl font-bold text-white font-poppins">
                                 {post.title}
                             </h1>
                         </Link>
