@@ -57,7 +57,7 @@ export default function Home({posts}:any) {
                                         Learn NextJS
                                     </h1>
                                     <p className="text-base">
-                                        React has dominated the world of technology for the past two decades. I would like to discuss why it has done so and what certain things have happened in the...
+                                        React has dominated the world of technology for the past two decades. I would like to discuss why it has done so and what...
                                     </p>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ export default function Home({posts}:any) {
                                         I want to visit Tokyo so baaad
                                     </h1>
                                     <p className="text-base">
-                                        Join me on a virtual journey as I share my burning desire to explore the Land of the Rising Sun.
+                                        Join me on a virtual journey as I share my burning desire to explore the Land of the Rising Sun...
                                     </p>
                                 </div>
                             </div>
