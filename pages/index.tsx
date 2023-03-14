@@ -45,7 +45,7 @@ export default function Home({posts}:any) {
                     <div className="flex flex-col items-center px-4 pt-8 pb-16 bg-gray-900">
                         <div className="flex flex-col max-w-6xl gap-6 text-white">
                             <h1 id="blogs" className="text-2xl font-bold font-poppins">
-                                Featured Blogs
+                                Featured Blogsss
                             </h1>
                             {/* individual post */}
                             <div className="flex flex-col gap-8 sm:grid-cols-2 sm:grid">
